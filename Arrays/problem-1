@@ -1,0 +1,36 @@
+For each of the following tasks, write an algorithm that solves it (3 algorithms in total) using an array of 100 integers:
+
+1. Store 100 numbers.
+2. Find the largest and smallest values, and display their values and positions in the array.
+3. Count and calculate the sum of all even numbers.
+
+--------------------------------------------------------
+A: arreglo de [0..99] de enteros;
+--------------------------------------------------------
+1)
+PARA i:= 0 HASTA 99 HACER
+  LEER(A[i]);
+FIN_PARA;
+--------------------------------------------------------
+2) 
+min, max:= A[0];           3 6 1 8 2 1 5 8 2
+
+PARA i:= 1 HASTA 99 HACER
+  SI A[i] < min ENTONCES
+    min:= A[i];
+  SINO
+    SI A[i] > max ENTONCES
+      max:= A[i];
+    FS;
+  FS;
+FP;
+--------------------------------------------------------
+3)
+sum:= 0;
+PARA i:= 0 HASTA 99 HACER
+  SI A[i] MOD 2 = 0 ENTONCES
+    sum:= sum + A[i];
+  FS;
+FP;
+
+
